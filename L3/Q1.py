@@ -6,10 +6,13 @@ from math import *
 
 people = int(input("How many people are sharing the bill?\n"))
 bill = float(input("How much is the bill?\n"))
-print("Kevin paid the bill first. But Kevin only has 100 dollar notes")
-print("So Kevin is going to paid $%d." % (________))   # replace with your code
-print("The cafe is giving %f to Kevin." % (________))  # replace with your code
-print("Each one should give %f to Kevin." % (_______)) # replace with your code
+print("Kevin pay the bill first. But Kevin only has 100 dollar notes")
+a=ceil(bill/100)
+b=a*100-bill
+c=bill*people/ (people+1)
+print("So Kevin is going to pay $%d." % int(a))   # replace with your code
+print("The cafe is giving %f to Kevin." % float(b))  # replace with your code
+print("Each one should give %f to Kevin." % float(c)) # replace with your code
 
 # b) Clap at Seven 
 # The purpose of the following program is to print the number from 1 to 100,
@@ -18,7 +21,7 @@ print("Each one should give %f to Kevin." % (_______)) # replace with your code
 
 number = 1
 while number <= 100:
-    if _______________ or ______________:   # replace with your code
+    if number % 7 == 0 or (number -7)% 10 ==0:   # replace with your code
         print('X', end=' ')
     else:
         print(number, end=' ')    
@@ -34,10 +37,10 @@ from random import randint
 
 #code for rolling a dice
 number = randint(1,6)
-print("I got a %d" % number)
 count = 1
-while ___________________ : # replace with your code
+while number != 6 : # replace with your code
     # Write some more code
+    number = randint(1,6)
     print("I got a %d" % number)
     count = count + 1
 
@@ -47,3 +50,31 @@ print("Oh, it takes me %d times to get a 6!!!" % count)
 # d) How long it takes, in general?
 # Repeat the experiment in part c for 100 times and see what is the average 
 # value of the count would be. This is challenging, isn't it?
+
+from random import randint
+
+#code for rolling a dice
+number = randint(1,6)
+count = 1
+n=1
+while n <=100:
+    number = randint(1,6)
+    while number != 6 : # replace with your code
+        # Write some more code
+        number = randint(1,6)
+        count = count + 1
+    n+=1
+print("Oh, it takes me %d times to get a 6 100 times!!!" % count)
+print('The average probability is %f' % float(count /100))  
+
+
+
+
+
+
+
+
+
+
+
+
