@@ -23,7 +23,7 @@ for n in range(1,j):
 
 
     # ascii art from https://www.asciiart.eu/people/body-parts/hand-gestures
-    print("Please input your choice")
+    print("Please input your choice (1 for stone, 2 for paper, 3 for scissor)")
     print("""
     1.                 2.                           3.
         _______                 _______                      _______
@@ -50,6 +50,7 @@ for n in range(1,j):
         print("Minion chooses paper!")
     elif m == 3:
         print("Minion chooses scissor!")
+        
     if (p==1 and m==3) or (p==2 and m==1) or (p==3 and m==2):
         print("You Win! Minion Loses!\nNext round:")
     elif p==m:
