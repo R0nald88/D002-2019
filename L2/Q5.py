@@ -17,8 +17,9 @@
 # Import necessary modules
 import random
 c=0
+j=4
 print('Welcome to the rock-paper-scissor game!\nYou are going to play against a minion!\nYou need to win the king three times in a row in order to throw him away from his throne')
-for n in range(1,4):
+for n in range(1,j):
 
 
     # ascii art from https://www.asciiart.eu/people/body-parts/hand-gestures
@@ -53,6 +54,7 @@ for n in range(1,4):
         print("You Win! Minion Loses!\nNext round:")
     elif p==m:
         print('Draw! One more round!')
+        j+=1
         continue
     elif p>3 and p<1:
         status=4
