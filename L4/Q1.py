@@ -10,8 +10,8 @@ collection = ["Pikachu", "Bulbasaur", "Squirtle", "Nidoqueen"]
 newly_caught = ["Bulbasaur", "Kakuna", "Arbok", "Jigglypuff"]
 
 for i in newly_caught:
-    if ________________ : # your code here
-        collection_______________        # your code here
+    if not i in collection : # your code here
+        collection.append(i)        # your code here
 
 print(collection) # should print ['Pikachu', 'Bulbasaur', 'Squirtle', 'Nidoqueen', 'Kakuna', 'Arbok', 'Jigglypuff']
 
@@ -25,7 +25,12 @@ print(collection) # should print ['Pikachu', 'Bulbasaur', 'Squirtle', 'Nidoqueen
 hsi = [20000, 21000, 21500, 22125, 21015, 22013, 19942, 24500]
 change = []
 
-# your code here
+a=0
+
+for i in range(1, len(hsi)):
+    a = int(hsi[i])-int(hsi[i-1])
+    change.append(a)
+    
 
 print(change)  # should print [1000, 500, 625, -1110, 998, -2071, 4558]
 
@@ -40,15 +45,21 @@ channels = ["TVB", "CCTV", "VIU", "RTHK", "Netflix", "TBS", "KBS"]
 
 current_channel = 0
 while True:
-    print("You are now watching %s" % channels[current_channel])
-    a = input("Please choose either Up/Down/Off\n")
-    if a == 'U':
-        # code
-    if a == 'D':
-        # code
-    if a == 'O':
-        break
-    # may be some more code
+    try:
+
+        a = input("Please choose either Up/Down/Off\n")
+        if a == 'U':
+            current_channel +=1
+            print("You are now watching %s" % channels[current_channel])
+        if a == 'D':
+            current_channel-=1
+            print("You are now watching %s" % channels[current_channel])
+        if a == 'O':
+            break
+    except:
+        current_channel = 0
+        print("You are now watching %s" % channels[current_channel])
+        continue
 
 
 
@@ -93,3 +104,4 @@ while True:
 ##Please choose either Up/Down/Off
 ##O
 ##>>>
+
