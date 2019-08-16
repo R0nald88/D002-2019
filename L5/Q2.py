@@ -10,7 +10,7 @@ def printcell(cells):
 e=0
 
 def check_col(cells):
-    for i in range(0, 2):
+    for i in range(0, 3):
         if cells[0][i] == cells[1][i] == cells[2][i] != ' ':
             
             
@@ -18,7 +18,7 @@ def check_col(cells):
     return False
 
 def check_row(cells):
-    for i in range(0, 2):
+    for i in range(0, 3):
         if cells[i][0] == cells[i][1] == cells[i][2] != ' ':
             
             
